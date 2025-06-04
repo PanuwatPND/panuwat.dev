@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute z-10 mt-2 w-32 bg-white  rounded-md shadow-lg cursor-pointer ">
+        <div className="absolute z-10 mt-2 min-w-[8rem] max-w-[90vw] bg-white rounded-md shadow-lg cursor-pointer right-0">
           {routing.locales.map((loc) => (
             <button
               key={loc}

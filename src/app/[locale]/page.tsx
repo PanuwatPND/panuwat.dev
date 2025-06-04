@@ -79,9 +79,9 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between text-center lg:text-left space-y-4 lg:space-y-0">
             <div>
               <h1 className="text-5xl font-extrabold text-gray-800 tracking-tight">
-                PANUWAT PHETSEEKAEW
+                PANUWAT PHETSEEKEAW
               </h1>
-              <h2 className="text-lg text-gray-500 font-medium">DEVELOPER</h2>
+              <h2 className="text-2xl text-gray-500 font-medium">DEVELOPER</h2>
             </div>
           </div>
 
@@ -91,20 +91,20 @@ export default function HomePage() {
               <div className="relative w-28 h-28 mx-auto lg:mx-0 rounded-full bg-cover overflow-hidden border-4 border-gray-300">
                 <ImageWrapper src="/profile.png" alt="Profile picture" />
               </div>
-              <div className="bg-white/95 shadow-xl rounded-lg p-6">
-                <h3 className="font-semibold text-lg mb-4">
+              <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
+                <h3 className="font-semibold text-2xl mb-4">
                   <span>|</span> {t("profileTitle")}
                 </h3>
-                <p className="text-gray-700 leading-relaxed ">
+                <p className="text-gray-700 leading-relaxed text-base">
                   {t("introduction")}
                 </p>
               </div>
 
-              <div className="bg-white/95 shadow-xl rounded-lg p-6">
-                <h3 className="font-semibold text-lg mb-4">
+              <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
+                <h3 className="font-semibold text-2xl mb-4">
                   <span>|</span> {t("educationTitle")}
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-base">
                   Bachelor of Computer Science, Khonkaen University (2018 -
                   2022)
                 </p>
@@ -113,15 +113,15 @@ export default function HomePage() {
 
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
-              <div className="bg-white/95 shadow-xl rounded-lg p-6">
-                <h3 className="font-semibold text-lg mb-4">
+              <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
+                <h3 className="font-semibold text-2xl mb-4">
                   <span>|</span> {t("experienceTitle")}
                 </h3>
                 <div className="mb-6">
                   <h4 className="font-bold">
                     Grit Consultant (2023 - Present)
                   </h4>
-                  <ul className="list-disc ml-6 text-gray-700 space-y-1 text-sm leading-relaxed">
+                  <ul className="list-disc ml-6 text-gray-700 space-y-1 text-base leading-relaxed">
                     <li>
                       Developed and maintained front-end components using
                       Nuxt.js
@@ -146,7 +146,7 @@ export default function HomePage() {
                   <h4 className="font-bold">
                     Khonkaen Softtech Co., Ltd (2022 - 2023)
                   </h4>
-                  <ul className="list-disc ml-6 text-gray-700 space-y-1 text-sm leading-relaxed">
+                  <ul className="list-disc ml-6 text-gray-700 space-y-1 text-base leading-relaxed">
                     <li>Finance ERP Program For Company</li>
                     <li>SSRN ERP Suan Sunandha Rajabhat University</li>
                     <li>
@@ -156,11 +156,11 @@ export default function HomePage() {
                   </ul>
                 </div>
               </div>
-              <div className="bg-white/95 shadow-xl rounded-lg p-6">
-                <h3 className="font-semibold text-lg mb-3">
+              <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
+                <h3 className="font-semibold text-2xl mb-3">
                   <span>|</span> CONTACT
                 </h3>
-                <div className="text-gray-700 space-y-2 break-words text-sm grid grid-cols-2">
+                <div className="text-gray-700 space-y-2 break-words text-base grid grid-cols-2">
                   <p className="flex items-center space-x-2">
                     <span>📞</span> <span>095-2367130</span>
                   </p>
@@ -201,21 +201,21 @@ export default function HomePage() {
                 </button>
               ))}
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center w-full max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center w-full max-w-5xl mx-auto">
               {filteredItems.map((skill, index) => (
                 <div
                   key={skill.name}
                   data-aos="zoom-in"
                   data-aos-delay={index * 100}
-                  className="shadow-lg rounded-xl p-6 flex flex-col items-center bg-white w-full transform transition duration-500 ease-in-out hover:scale-110 hover:shadow-2xl"
+                  className="shadow-2xl rounded-2xl p-8 flex flex-col items-center bg-white w-full transform transition duration-500 ease-in-out hover:scale-110 hover:shadow-2xl"
                 >
-                  <div className="relative w-20 h-20 mb-4">
+                  <div className="relative w-18 h-18 mb-4">
                     <ImageWrapper
                       src={`/skills/${skill.icon}`}
                       alt={skill.name}
                     />
                   </div>
-                  <span className="text-sm text-center text-gray-700">
+                  <span className="text-base text-center text-gray-700">
                     {skill.name}
                   </span>
                 </div>

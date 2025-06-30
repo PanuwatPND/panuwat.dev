@@ -75,6 +75,16 @@ export default function HomePage() {
     AOS.init();
   }, []);
 
+  // Project descriptions for modal
+  const projectDescriptions: { [key: string]: string } = {
+    "Web Tournament Manager (Game)": t("webTournamentManager"),
+    "Web app & Web manager for Gas Company (PHP, Laravel)": t(
+      "webAppAndWebManagerForGasCompany"
+    ),
+    "HRM for Grit Consultant": t("hrmForGritConsultant"),
+    "ERP & HRM for Company User": t("erpAndHrmForCompanyUser"),
+  };
+
   return (
     <div>
       <div className="flex-1 relative z-10">
@@ -182,7 +192,9 @@ export default function HomePage() {
                       <li
                         key={idx}
                         className="cursor-pointer hover:underline"
-                        onClick={() => setModalContent(item)}
+                        onClick={() =>
+                          setModalContent(projectDescriptions[item])
+                        }
                       >
                         {item}
                       </li>

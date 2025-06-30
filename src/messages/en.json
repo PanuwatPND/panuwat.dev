@@ -12,6 +12,10 @@
     "introduction": "I am a passionate Developer with a focus on building dynamic and responsive web applications. With attention to detail and a commitment to creating high-quality, user-friendly interfaces, I continuously strive to improve myself by applying and expanding my knowledge to deliver the best results."
     ,
     "detail": "Detail",
-    "close": "Close"
+    "close": "Close",
+    "webTournamentManager": "A web-based platform built with Nuxt.js to organize, manage, and track game tournaments. Features include participant registration, match scheduling, real-time score updates, and automated bracket generation.",
+    "webAppAndWebManagerForGasCompany": "Developed an internal management system for a gas distribution company using PHP and Laravel. It includes order tracking, customer management, invoicing, and reporting dashboards tailored to their business workflows.",
+    "hrmForGritConsultant": "A customized HRM (Human Resource Management) system designed with Nuxt.js. Provides employee data management, attendance tracking, and basic performance evaluation tools to streamline HR operations.",
+    "erpAndHrmForCompanyUser": "Built an integrated ERP and HRM solution with Nuxt.js. Supports financial modules, human resources workflows, payroll processing, and multi-department coordination for improved operational efficiency."
   }
 }

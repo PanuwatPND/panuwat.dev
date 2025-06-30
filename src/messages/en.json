@@ -7,8 +7,11 @@
     "skillsDescription": "ทักษะที่ถนัด",
     "profileTitle": "Profile",
     "experienceTitle": "Experience",
-    "educationTitle": "Education"
-    ,
+    "educationTitle": "Education",
+    "viewCV": "View My CV",
     "introduction": "I am a passionate Developer with a focus on building dynamic and responsive web applications. With attention to detail and a commitment to creating high-quality, user-friendly interfaces, I continuously strive to improve myself by applying and expanding my knowledge to deliver the best results."
+    ,
+    "detail": "Detail",
+    "close": "Close"
   }
 }

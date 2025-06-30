@@ -35,11 +35,14 @@ export default function LanguageSwitcher() {
         className="flex items-center gap-1 px-2 py-1 "
       >
         <span className="text-2xl">{flags[locale]}</span>
-        <ChevronDown className="w-5 h-5" />
+        <ChevronDown className="w-6 h-6" />
       </button>
 
       {open && (
-        <div className="absolute z-10 mt-2 min-w-[8rem] max-w-[90vw] bg-white rounded-md shadow-lg cursor-pointer right-0">
+        <div
+          className="absolute z-10 mt-2 min-w-[8rem] max-w-[90vw] bg-white rounded-md shadow-lg cursor-pointer right-0
+        border border-gray-200"
+        >
           {routing.locales.map((loc) => (
             <button
               key={loc}

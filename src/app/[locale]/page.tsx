@@ -113,7 +113,7 @@ export default function HomePage() {
             {/* Sidebar - Contact */}
             <div className="space-y-6">
               <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-4">
+                <h3 className="font-semibold text-2xl mb-4 text-black">
                   <span>|</span> {t("profileTitle")}
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-base">
@@ -122,7 +122,7 @@ export default function HomePage() {
               </div>
 
               <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-4">
+                <h3 className="font-semibold text-2xl mb-4 text-black">
                   <span>|</span> {t("educationTitle")}
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-base">
@@ -131,7 +131,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-4">
+                <h3 className="font-semibold text-2xl mb-4 text-black">
                   <span>|</span> Curriculum Vitae (CV)
                 </h3>
                 <div className="flex justify-center">
@@ -164,7 +164,7 @@ export default function HomePage() {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
               <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-4">
+                <h3 className="font-semibold text-2xl mb-4 text-black">
                   <span>|</span> {t("experienceTitle")}
                 </h3>
                 <h4 className="font-bold">
@@ -216,7 +216,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-3">
+                <h3 className="font-semibold text-2xl mb-3 text-black   ">
                   <span>|</span> CONTACT
                 </h3>
                 <div className="text-gray-700 space-y-2 break-words text-base grid grid-cols-1 sm:grid-cols-2">

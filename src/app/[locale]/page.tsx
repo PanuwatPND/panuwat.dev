@@ -297,7 +297,7 @@ export default function HomePage() {
                 </button>
 
                 {open && (
-                  <div className="absolute z-50 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg w-52">
+                  <div className="absolute z-50 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg w-52 text-black">
                     {categories.map((cat) => (
                       <div
                         key={cat}

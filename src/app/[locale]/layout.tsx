@@ -43,7 +43,7 @@ export default async function LocaleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider>
-          <div className="relative min-h-screen bg-[url('/bg-page.jpg')] bg-cover bg-center font-sans  sm:px-12 ">
+          <div className="relative min-h-screen bg-[url('/bg-page.jpg')] bg-cover bg-center font-sans  sm:px-12  text-black  ">
             <div className="relative z-10 flex flex-col min-h-screen">
               <div className="py-4 bg-white/70 border-b border-gray-200 backdrop-blur sticky top-0 z-50 shadow-b-lg sm:rounded-bl-xl sm:rounded-br-xl">
                 <Header />

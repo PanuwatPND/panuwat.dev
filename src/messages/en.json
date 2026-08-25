@@ -9,13 +9,18 @@
     "experienceTitle": "Experience",
     "educationTitle": "Education",
     "viewCV": "View My CV",
-    "introduction": "I am a passionate Developer with a focus on building dynamic and responsive web applications. With attention to detail and a commitment to creating high-quality, user-friendly interfaces, I continuously strive to improve myself by applying and expanding my knowledge to deliver the best results."
-    ,
+    "introduction": "I am a passionate Developer with a focus on building dynamic and responsive web applications. With attention to detail and a commitment to creating high-quality, user-friendly interfaces, I continuously strive to improve myself by applying and expanding my knowledge to deliver the best results.",
     "detail": "Detail",
     "close": "Close",
     "webTournamentManager": "A web-based platform built with Nuxt.js to organize, manage, and track game tournaments. Features include participant registration, match scheduling, real-time score updates, and automated bracket generation.",
-    "webAppAndWebManagerForGasCompany": "Developed an internal management system for a gas distribution company using PHP and Laravel. It includes order tracking, customer management, invoicing, and reporting dashboards tailored to their business workflows.",
-    "hrmForGritConsultant": "A customized HRM (Human Resource Management) system designed with Nuxt.js. Provides employee data management, attendance tracking, and basic performance evaluation tools to streamline HR operations.",
-    "erpAndHrmForCompanyUser": "Built an integrated ERP and HRM solution with Nuxt.js. Supports financial modules, human resources workflows, payroll processing, and multi-department coordination for improved operational efficiency."
+    "hrmForGritConsultant": "A pair of Nuxt 3 applications for Grit Consultant's own HR. The employee app handles check-in, attendance history and summaries, leave requests, announcements and documents; the admin app handles organisational and position structure, work shifts, leave quotas, holidays, role-based access and reports.",
+    "erpAndHrmForCompanyUser": "Built an integrated ERP and HRM solution with Nuxt.js. Supports financial modules, human resources workflows, payroll processing, and multi-department coordination for improved operational efficiency.",
+    "cooperativeBackOffice": "Back-office system for a large savings and credit cooperative. Built with Nuxt 3 and split into eleven domain layers - members, capital stock, savings, cashier and financial counters, journals and chart of accounts, registration, reports and settings. Thai-first UI with a Buddhist-era calendar. My largest project, with roughly two thousand commits.",
+    "gasCompanyWorkflow": "A Laravel web application that manages the internal work flow of a gas distribution company, covering both the customer-facing web app and the admin manager, deployed as a Docker image.",
+    "activityLuckyDraw": "Nuxt 4 platform for cooperative member events and lucky draws - event registration, running the draw, PDF export and reporting for both events and draws. Instrumented with Sentry and shipped with Docker.",
+    "cooperativeHrm": "Nuxt 4 and Nuxt UI v4 human-resource system for cooperative staff, covering employees, personnel records, welfare requests, seminars, permissions and reports, on a fully typed API client.",
+    "lendingAndDelinquency": "Nuxt 4 loan system covering applications, eligibility checks, loan consideration, loan accounts and configuration, plus delinquency handling - notice letters, debt relief, dividend seizure, guarantee evidence, bankruptcy status and member removal. The only app in this product family with Vitest unit tests.",
+    "cooperativeMemberWeb": "Nuxt 3 member-facing website for the cooperative, where members request documents, read announcements and the board, view performance reports, follow upload guides and read the terms of use.",
+    "cashierPos": "Nuxt 3 single-page app packaged with Tauri into a desktop point-of-sale application for cooperative counters. Covers cash counting, income and expenses, payments, transactions, deposit accounts, cash dividends and 50 Bis tax certificates, authenticated through Keycloak SSO."
   }
 }

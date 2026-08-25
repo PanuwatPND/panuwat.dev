@@ -77,35 +77,58 @@ export default function HomePage() {
 
   // Project descriptions for modal
   const projectDescriptions: { [key: string]: string } = {
-    "Web Tournament Manager (Game)": t("webTournamentManager"),
-    "Web app & Web manager for Gas Company (PHP, Laravel)": t(
-      "webAppAndWebManagerForGasCompany"
+    "Savings Cooperative Back-office System": t("cooperativeBackOffice"),
+    "Gas Distribution Company - Workflow System (PHP, Laravel)": t(
+      "gasCompanyWorkflow"
     ),
-    "HRM for Grit Consultant": t("hrmForGritConsultant"),
+    "HRM for Grit Consultant (Employee + Admin)": t("hrmForGritConsultant"),
+    "Member Activity & Lucky Draw Platform": t("activityLuckyDraw"),
+    "Cooperative HR Management System": t("cooperativeHrm"),
+    "Cooperative Lending & Delinquency System": t("lendingAndDelinquency"),
+    "Cooperative Member Web Portal": t("cooperativeMemberWeb"),
+    "Cashier Counter POS Desktop App (Tauri)": t("cashierPos"),
+    "Web Tournament Manager (Game)": t("webTournamentManager"),
     "ERP & HRM for Company User": t("erpAndHrmForCompanyUser"),
   };
+
+  const gritProjects: string[] = Object.keys(projectDescriptions);
 
   return (
     <div>
       <div className="flex-1 relative z-10">
         <div className="max-w-6xl mx-auto pt-24 px-4 sm:px-8 space-y-12">
-          <div className="flex flex-col lg:flex-row lg:items-center text-center lg:gap-8 lg:text-left space-y-6 lg:space-y-0">
-            <div>
-              <div className="relative w-36 h-36 mx-auto lg:mx-0 rounded-full bg-cover overflow-hidden ring-4 ring-offset-4 ring-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-                <ImageWrapper
-                  src="/profile.jpg"
-                  alt="Profile picture"
-                  className="w-full h-full object-cover rounded-full"
-                />
+          <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:gap-7 sm:text-left">
+            {/* Avatar: gradient ring + availability dot */}
+            <div className="relative shrink-0 rounded-full p-[3px] bg-[conic-gradient(from_210deg,#0F172A,#475569_32%,#CBD5E1_55%,#64748B_78%,#0F172A)] shadow-[0_8px_24px_-10px_#0F172A8C]">
+              <div className="rounded-full bg-white p-[3px]">
+                <div className="relative w-23 h-23 rounded-full overflow-hidden">
+                  <ImageWrapper
+                    src="/profile.jpg"
+                    alt="Panuwat Phetseekaew"
+                    priority
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
               </div>
+              <span
+                aria-hidden="true"
+                className="absolute bottom-1 right-1 w-[18px] h-[18px] rounded-full bg-[#1C785A] border-[3px] border-white"
+              />
             </div>
+
             <div>
-              <h1 className="text-5xl font-extrabold text-black">
-                PANUWAT PHETSEEKEAW
+              <h1 className="text-[clamp(25px,4vw,40px)] font-extrabold leading-[1.02] tracking-[-0.035em] text-[#0B1220]">
+                PANUWAT
+                <br />
+                PHETSEEKEAW
               </h1>
-              <div className="inline-block mt-2 px-4 py-1 bg-gray-800 text-white rounded-full text-lg">
-                DEVELOPER
-              </div>
+              <p className="mt-3 flex items-center justify-center gap-2.5 font-mono text-[11.5px] font-medium uppercase tracking-[0.15em] text-[#37485A] sm:justify-start">
+                <span
+                  aria-hidden="true"
+                  className="w-[18px] h-[2px] rounded-full bg-[#0F172A]"
+                />
+                Developer
+              </p>
             </div>
           </div>
 
@@ -168,14 +191,15 @@ export default function HomePage() {
                   <span>|</span> {t("experienceTitle")}
                 </h3>
                 <h4 className="font-bold">
-                  Grit Consultant Co., Ltd (2022 - 2023)
+                  Grit Consultant Co., Ltd (2024 - Present)
                 </h4>
                 <ul className="list-disc ml-6 text-gray-700 space-y-1 text-base leading-relaxed">
                   {[
-                    "Developed and maintained front-end components using Nuxt.js",
-                    "Collaborated closely with back-end developers and designers",
-                    "Optimized web applications for speed and scalability",
-                    "Conducted code reviews and gave feedback",
+                    "Built and maintained Nuxt 3 / Nuxt 4 front-ends across a family of eight web applications for a savings cooperative",
+                    "Designed shared Nuxt layers, service layers and Pinia stores; form validation with valibot",
+                    "Integrated REST APIs against a shared Bruno API contract, with Keycloak SSO and cookie-based JWT refresh",
+                    "Packaged a Nuxt SPA as a desktop POS app with Tauri, and containerised every app with Docker",
+                    "Added unit tests with Vitest, monitored production with Sentry, and reviewed teammates' code",
                   ].map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
@@ -183,12 +207,7 @@ export default function HomePage() {
                 <div className="mt-2">
                   <h5 className="font-semibold mb-2 ml-2">- Projects</h5>
                   <ul className="list-disc ml-6 text-gray-700 space-y-1 text-base leading-relaxed">
-                    {[
-                      "Web Tournament Manager (Game)",
-                      "Web app & Web manager for Gas Company (PHP, Laravel)",
-                      "HRM for Grit Consultant",
-                      "ERP & HRM for Company User",
-                    ].map((item, idx) => (
+                    {gritProjects.map((item, idx) => (
                       <li
                         key={idx}
                         className="cursor-pointer hover:underline"

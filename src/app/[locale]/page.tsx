@@ -180,7 +180,7 @@ export default function HomePage() {
                   href="/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-[10px] bg-[#0F172A] px-4 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#1E293B]"
+                  className="inline-flex items-center gap-2 rounded-[10px] bg-[#0F172A] px-5 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-[#1E293B]"
                 >
                   {t("viewCV")}
                 </a>
@@ -262,7 +262,7 @@ export default function HomePage() {
                         key={item}
                         type="button"
                         onClick={() => setModalContent(projectDescriptions[item])}
-                        className="flex items-center gap-2 rounded-[10px] border border-[#0F172A1A] bg-white px-3 py-2.5 text-left text-[13.5px] text-gray-700 transition-colors hover:border-[#0F172A57] hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F172A]"
+                        className="flex items-center gap-2 rounded-[10px] border border-[#0F172A1A] bg-white px-3.5 py-3 text-left text-[13.5px] text-gray-700 transition-colors hover:border-[#0F172A57] hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F172A]"
                       >
                         {item}
                         <span

@@ -9,6 +9,24 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import ImageWrapper from "@/components/ImageWrapper";
 
+const CARD =
+  "bg-white border border-[#0F172A14] rounded-2xl p-6 shadow-[0_12px_28px_-18px_#0F172A5C]";
+const CARD_TITLE =
+  "flex items-center gap-2.5 text-xl font-semibold tracking-[-0.01em] text-[#0B1220]";
+const RAIL =
+  "border-l-2 border-[#0F172A1F] pl-4";
+const YEAR =
+  "font-mono text-[11px] font-medium uppercase tracking-[0.11em] text-[#7B8794]";
+const BULLETS =
+  "mt-2 list-disc pl-5 space-y-1 text-[15px] leading-relaxed text-gray-600 marker:text-gray-400";
+
+const Rail = () => (
+  <span
+    aria-hidden="true"
+    className="w-[3px] h-[19px] shrink-0 rounded-[2px] bg-[linear-gradient(180deg,#0F172A,#94A3B8)]"
+  />
+);
+
 export default function HomePage() {
   const t = useTranslations("HomePage");
   type Skill = {
@@ -132,99 +150,143 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Sidebar - Contact */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Sidebar */}
             <div className="space-y-6">
-              <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-4 text-black">
-                  <span>|</span> {t("profileTitle")}
+              <div className={CARD}>
+                <h3 className={`${CARD_TITLE} mb-3`}>
+                  <Rail /> {t("profileTitle")}
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-base">
+                <p className="text-gray-600 leading-relaxed text-[15px]">
                   {t("introduction")}
                 </p>
               </div>
 
-              <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-4 text-black">
-                  <span>|</span> {t("educationTitle")}
+              <div className={CARD}>
+                <h3 className={`${CARD_TITLE} mb-3`}>
+                  <Rail /> {t("educationTitle")}
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-base">
+                <p className="text-gray-600 leading-relaxed text-[15px]">
                   Bachelor of Computer Science, Khonkaen University (2018 -
                   2022)
                 </p>
               </div>
-              <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-4 text-black">
-                  <span>|</span> Curriculum Vitae (CV)
+
+              <div className={`${CARD} flex flex-wrap items-center justify-between gap-3`}>
+                <h3 className={CARD_TITLE}>
+                  <Rail /> Curriculum Vitae (CV)
                 </h3>
-                <div className="flex justify-center">
-                  <a
-                    href="/cv.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-full shadow hover:bg-gray-700 transition duration-300"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      className="w-5 h-5"
+                <a
+                  href="/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-[10px] bg-[#0F172A] px-4 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#1E293B]"
+                >
+                  {t("viewCV")}
+                </a>
+              </div>
+
+              <div className={CARD}>
+                <h3 className={`${CARD_TITLE} mb-3`}>
+                  <Rail /> CONTACT
+                </h3>
+                <div className="space-y-1.5 break-words text-[15px] text-gray-600">
+                  <p>
+                    Phone: <span className="text-[#0B1220]">095-2367130</span>
+                  </p>
+                  <p>
+                    Email:{" "}
+                    <span className="text-[#0B1220]">panuwat.vyse@gmail.com</span>
+                  </p>
+                  <p>
+                    Github:{" "}
+                    <a
+                      href="https://github.com/panuwatPND"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0B1220] hover:underline"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 4.5v15m7.5-7.5h-15"
-                      />
-                    </svg>
-                    {t("viewCV")}
-                  </a>
+                      panuwatPND
+                    </a>
+                  </p>
+                  <p>
+                    Website:{" "}
+                    <a
+                      href="https://panuwatdev.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0B1220] hover:underline"
+                    >
+                      https://panuwatdev.vercel.app
+                    </a>
+                  </p>
+                  <p>
+                    Line: <span className="text-[#0B1220]">panuwat.tp</span>
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
-              <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-4 text-black">
-                  <span>|</span> {t("experienceTitle")}
+            {/* Main Content - one card per company */}
+            <div className="lg:col-span-2 space-y-6">
+              <div className={CARD}>
+                <h3 className={`${CARD_TITLE} mb-4`}>
+                  <Rail /> {t("experienceTitle")}
                 </h3>
-                <h4 className="font-bold">
-                  Grit Consultant Co., Ltd (2024 - Present)
-                </h4>
-                <ul className="list-disc ml-6 text-gray-700 space-y-1 text-base leading-relaxed">
-                  {[
-                    "Built and maintained Nuxt 3 / Nuxt 4 front-ends across a family of eight web applications for a savings cooperative",
-                    "Designed shared Nuxt layers, service layers and Pinia stores; form validation with valibot",
-                    "Integrated REST APIs against a shared Bruno API contract, with Keycloak SSO and cookie-based JWT refresh",
-                    "Packaged a Nuxt SPA as a desktop POS app with Tauri, and containerised every app with Docker",
-                    "Added unit tests with Vitest, monitored production with Sentry, and reviewed teammates' code",
-                  ].map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-                <div className="mt-2">
-                  <h5 className="font-semibold mb-2 ml-2">- Projects</h5>
-                  <ul className="list-disc ml-6 text-gray-700 space-y-1 text-base leading-relaxed">
-                    {gritProjects.map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="cursor-pointer hover:underline"
-                        onClick={() =>
-                          setModalContent(projectDescriptions[item])
-                        }
-                      >
-                        {item}
-                      </li>
+                <div className={RAIL}>
+                  <p className={YEAR}>2024 - Present</p>
+                  <h4 className="mt-0.5 font-bold text-[#0B1220]">
+                    Grit Consultant Co., Ltd{" "}
+                    <span className="font-normal text-gray-500">
+                      (2024 - Present)
+                    </span>
+                  </h4>
+                  <ul className={BULLETS}>
+                    {[
+                      "Built and maintained Nuxt 3 / Nuxt 4 front-ends across a family of eight web applications for a savings cooperative",
+                      "Designed shared Nuxt layers, service layers and Pinia stores; form validation with valibot",
+                      "Integrated REST APIs against a shared Bruno API contract, with Keycloak SSO and cookie-based JWT refresh",
+                      "Packaged a Nuxt SPA as a desktop POS app with Tauri, and containerised every app with Docker",
+                      "Added unit tests with Vitest, monitored production with Sentry, and reviewed teammates' code",
+                    ].map((item, idx) => (
+                      <li key={idx}>{item}</li>
                     ))}
                   </ul>
+
+                  <h5 className="mt-4 mb-2 text-[11px] font-bold uppercase tracking-[0.13em] text-slate-500">
+                    - Projects
+                  </h5>
+                  <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                    {gritProjects.map((item) => (
+                      <button
+                        key={item}
+                        type="button"
+                        onClick={() => setModalContent(projectDescriptions[item])}
+                        className="flex items-center gap-2 rounded-[10px] border border-[#0F172A1A] bg-white px-3 py-2.5 text-left text-[13.5px] text-gray-700 transition-colors hover:border-[#0F172A57] hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0F172A]"
+                      >
+                        {item}
+                        <span
+                          aria-hidden="true"
+                          className="ml-auto shrink-0 text-base leading-none text-slate-400"
+                        >
+                          &rsaquo;
+                        </span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold mt-4">
-                    Khonkaen Softtech Co., Ltd (2022 - 2023)
+              </div>
+
+              <div className={CARD}>
+                <div className={RAIL}>
+                  <p className={YEAR}>2022 - 2023</p>
+                  <h4 className="mt-0.5 font-bold text-[#0B1220]">
+                    Khonkaen Softtech Co., Ltd{" "}
+                    <span className="font-normal text-gray-500">
+                      (2022 - 2023)
+                    </span>
                   </h4>
-                  <ul className="list-disc ml-6 text-gray-700 space-y-1 text-base leading-relaxed">
+                  <ul className={BULLETS}>
                     <li>Finance ERP Program For Company</li>
                     <li>SSRN ERP Suan Sunandha Rajabhat University</li>
                     <li>
@@ -232,48 +294,6 @@ export default function HomePage() {
                       Technology
                     </li>
                   </ul>
-                </div>
-              </div>
-              <div className="bg-white/95 shadow-2xl rounded-2xl p-8 transition-transform transform hover:scale-[1.01]">
-                <h3 className="font-semibold text-2xl mb-3 text-black   ">
-                  <span>|</span> CONTACT
-                </h3>
-                <div className="text-gray-700 space-y-2 break-words text-base grid grid-cols-1 sm:grid-cols-2">
-                  <p className="flex items-center space-x-2">
-                    <span>Phone:</span> <span>095-2367130</span>
-                  </p>
-                  <p className="flex items-center space-x-2">
-                    <span>Email:</span> <span>panuwat.vyse@gmail.com</span>
-                  </p>
-                  <p className="flex items-center space-x-2 ">
-                    <span>Github: </span>
-                    <span>
-                      <a
-                        href="https://github.com/panuwatPND"
-                        target="_blank"
-                        className="hover:underline"
-                      >
-                        panuwatPND
-                      </a>
-                    </span>
-                  </p>
-                  <p className="flex items-center space-x-2 ">
-                    <span>Website:</span>
-                    <span>
-                      <a
-                        href="https://panuwatdev.vercel.app/"
-                        target="_blank"
-                        className="hover:underline"
-                      >
-                        https://panuwatdev.vercel.app
-                      </a>
-                    </span>
-                  </p>
-                  <p className="flex items-center space-x-2">
-                    <span>Line:</span>
-
-                    <span>panuwat.tp</span>
-                  </p>
                 </div>
               </div>
             </div>
